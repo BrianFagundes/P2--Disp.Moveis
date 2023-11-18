@@ -62,18 +62,32 @@ class _CatPhotoScreenState extends State<CatPhotoScreen> {
       appBar: AppBar(
         title: Text('Fotos de Gatos'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: _catPhotos
-              .map((url) => Image.network(
+      body: Center(
+        child: Scrollbar(
+          // Define a direção da barra de rolagem
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            primary:
+                true, // Set to true to associate the ScrollController with the ScrollView
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: _catPhotos.map((url) {
+                return Container(
+                  margin: EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 2.0,
+                    ),
+                  ),
+                  child: Image.network(
                     url,
+                    width: 400.0,
                     loadingBuilder: (BuildContext context, Widget child,
                         ImageChunkEvent? loadingProgress) {
                       if (loadingProgress == null) {
-                        // Se o carregamento estiver completo, exibe a imagem
                         return child;
                       } else {
-                        // Durante o carregamento, exibe um indicador de progresso
                         return Center(
                           child: CircularProgressIndicator(
                             value: loadingProgress.expectedTotalBytes != null
@@ -86,13 +100,15 @@ class _CatPhotoScreenState extends State<CatPhotoScreen> {
                     },
                     errorBuilder: (BuildContext context, Object error,
                         StackTrace? stackTrace) {
-                      // Se ocorrer um erro, exibe uma mensagem ou uma imagem de erro padrão
                       return Center(
                         child: Icon(Icons.error),
                       );
                     },
-                  ))
-              .toList(),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
