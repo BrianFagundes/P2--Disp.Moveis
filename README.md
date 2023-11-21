@@ -1,16 +1,17 @@
-# p2dartflutter
+Sequência de comandos para utilizar nosso projeto
 
-A new Flutter project.
+git clone https://github.com/BrianFagundes/P2--Disp.Moveis
+cd P2--Disp.Moveis
+flutter run
 
-## Getting Started
+Em caso de nao aparecer as fotos ao rodar a aplicação, utilizar :
 
-This project is a starting point for a Flutter application.
+flutter run -d chrome --web-renderer html
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Nomes:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ARTUR HERON NARDUCCI FELICIO RA: 2040482113007
+BRIAN FAGUNDES DE MOURA RA: 2040482123007
+BRUNO CHICUTA RA: 2040482123047 
+RAFAEL VANDELIND RA: 2040482123049
