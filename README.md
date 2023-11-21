@@ -1,7 +1,9 @@
 Sequência de comandos para utilizar nosso projeto
 
 git clone https://github.com/BrianFagundes/P2--Disp.Moveis
+
 cd P2--Disp.Moveis
+
 flutter run
 
 Em caso de nao aparecer as fotos ao rodar a aplicação, utilizar :
