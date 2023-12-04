@@ -1,3 +1,6 @@
+O projeto tem como ideia, trabalhar o consumo de API.
+
+
 Sequência de comandos para utilizar nosso projeto
 
 git clone https://github.com/BrianFagundes/P2--Disp.Moveis
